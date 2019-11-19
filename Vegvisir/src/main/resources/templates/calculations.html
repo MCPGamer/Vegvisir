@@ -15,21 +15,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h1>Willkommen bei Vegvisir</h1>
-
-				<h3>Eingaben:</h3>
-				<form action="#" th:action="@{/}"
-					th:object="${inputs}" method="POST">
-					Punkt A X/Y koordinaten
-					<p><input th:field="*{a.X}"></input><input th:field="*{a.Y}"></input></p>
-					Punkt B X/Y koordinaten
-					<p><input th:field="*{b.X}"></input><input th:field="*{b.Y}"></input></p>
-					Vektor richtung X/Y koordinaten
-					<p><input th:field="*{vector.X}"></input><input th:field="*{vector.Y}"></input></p>
-					Vektor Magnitude
-					<p><input th:field="*{magnitude}"></input></p>
-					<input type="submit" value="Set Inputs">
-				</form>
+				<h1>Berechnungen</h1>
+				
+				<a th:href="@{index}" class="btn btn-primary"><li>Neue Berechnung</li></a>
 			</div>
 		</div>
 	</div>

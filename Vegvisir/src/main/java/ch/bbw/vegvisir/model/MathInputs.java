@@ -3,11 +3,10 @@ package ch.bbw.vegvisir.model;
 import java.awt.Point;
 
 public class MathInputs {
-	private Point a;
-	private Point b;
-	private Point vector;
-	private double magnitude;
-
+	private Point a = new Point();
+	private Point b = new Point();
+	private Point vector = new Point();
+	private double magnitude = 0.0d;
 	
 	public Point getA() {
 		return a;
