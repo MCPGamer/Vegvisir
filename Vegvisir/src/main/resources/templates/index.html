@@ -18,14 +18,14 @@
 				<h1>Willkommen bei Vegvisir</h1>
 
 				<h3>Eingaben:</h3>
-				<form action="#" th:action="@{/}"
-					th:object="${inputs}" method="POST">
+				<form action="#" th:action="@{index}"
+					th:object="${inputs}" method="post">
 					Punkt A X/Y koordinaten
-					<p><input th:field="*{a.X}"></input><input th:field="*{a.Y}"></input></p>
+					<p><input th:field="*{aX}"></input><input th:field="*{aY}"></input></p>
 					Punkt B X/Y koordinaten
-					<p><input th:field="*{b.X}"></input><input th:field="*{b.Y}"></input></p>
+					<p><input th:field="*{bX}"></input><input th:field="*{bY}"></input></p>
 					Vektor richtung X/Y koordinaten
-					<p><input th:field="*{vector.X}"></input><input th:field="*{vector.Y}"></input></p>
+					<p><input th:field="*{vectorX}"></input><input th:field="*{vectorY}"></input></p>
 					Vektor Magnitude
 					<p><input th:field="*{magnitude}"></input></p>
 					<input type="submit" value="Set Inputs">

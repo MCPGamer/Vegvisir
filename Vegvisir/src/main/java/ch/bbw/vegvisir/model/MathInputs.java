@@ -1,34 +1,61 @@
 package ch.bbw.vegvisir.model;
 
-import java.awt.Point;
-
 public class MathInputs {
-	private Point a = new Point();
-	private Point b = new Point();
-	private Point vector = new Point();
+	private int aX, aY, bX, bY, vectorX, vectorY;
 	private double magnitude = 0.0d;
-	
-	public Point getA() {
-		return a;
+
+	public int getaX() {
+		return aX;
 	}
-	public void setA(Point a) {
-		this.a = a;
+
+	public void setaX(int aX) {
+		this.aX = aX;
 	}
-	public Point getB() {
-		return b;
+
+	public int getaY() {
+		return aY;
 	}
-	public void setB(Point b) {
-		this.b = b;
+
+	public void setaY(int aY) {
+		this.aY = aY;
 	}
-	public Point getVector() {
-		return vector;
+
+	public int getbX() {
+		return bX;
 	}
-	public void setVector(Point vector) {
-		this.vector = vector;
+
+	public void setbX(int bX) {
+		this.bX = bX;
 	}
+
+	public int getbY() {
+		return bY;
+	}
+
+	public void setbY(int bY) {
+		this.bY = bY;
+	}
+
+	public int getVectorX() {
+		return vectorX;
+	}
+
+	public void setVectorX(int vectorX) {
+		this.vectorX = vectorX;
+	}
+
+	public int getVectorY() {
+		return vectorY;
+	}
+
+	public void setVectorY(int vectorY) {
+		this.vectorY = vectorY;
+	}
+
 	public double getMagnitude() {
 		return magnitude;
 	}
+
 	public void setMagnitude(double magnitude) {
 		this.magnitude = magnitude;
 	}

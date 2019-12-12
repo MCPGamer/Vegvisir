@@ -17,7 +17,24 @@
 			<div class="col-12">
 				<h1>Berechnungen</h1>
 				
-				<a th:href="@{index}" class="btn btn-primary"><li>Neue Berechnung</li></a>
+				<a th:href="@{index}" class="btn btn-primary"><li>Neue Werte eingeben</li></a>
+				<p th:inline="text">
+				Eingegebene Werte:
+				<div th:if="${inputs.aX != 0 && inputs.aY != 0}">
+				Punkt A: [[${inputs.aX}]] / [[${inputs.aY}]] 
+				</div>
+				<div th:if="${inputs.bX !=  0 && inputs.bY !=  0}">
+				Punkt B: [[${inputs.bX}]] / [[${inputs.bY}]] 
+				</div>
+				<div th:if="${inputs.vectorX !=  0 && inputs.vectorY !=  0}">
+				Vektor: [[${inputs.vectorX}]] / [[${inputs.vectorY}]]
+				</div>
+				<div th:if="${inputs.magnitude !=  0}">
+				Vektor Magnitude: [[${inputs.magnitude}]]
+				</div>
+				</p>
+				
+				<a th:href="@{calculations/calc}" class="btn btn-primary"><li>Restliche Werte Berechnen</li></a>
 			</div>
 		</div>
 	</div>
