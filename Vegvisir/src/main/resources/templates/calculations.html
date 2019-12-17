@@ -16,24 +16,69 @@
 		<div class="row">
 			<div class="col-12">
 				<h1>Berechnungen</h1>
-				
+				<img style="width:200px;" th:src="@{/images/logo.png}" class="carddeck"/>
+				<br>
 				<a th:href="@{index}" class="btn btn-primary"><li>Neue Werte eingeben</li></a>
 				<p th:inline="text">
-				Eingegebene Werte:
-				<div th:if="${inputs.aX != 0 && inputs.aY != 0}">
+				Eingegebene sowie Berechnete Werte:
+				<div th:if="${inputs.aX != 0.0d && inputs.aY != 0.0d}">
 				Punkt A: [[${inputs.aX}]] / [[${inputs.aY}]] 
 				</div>
-				<div th:if="${inputs.bX !=  0 && inputs.bY !=  0}">
+				<div th:if="${inputs.bX !=  0.0d && inputs.bY !=  0.0d}">
 				Punkt B: [[${inputs.bX}]] / [[${inputs.bY}]] 
 				</div>
-				<div th:if="${inputs.vectorX !=  0 && inputs.vectorY !=  0}">
+				<div th:if="${inputs.vectorX != 0.0d && inputs.vectorY !=  0.0d}">
 				Vektor: [[${inputs.vectorX}]] / [[${inputs.vectorY}]]
 				</div>
-				<div th:if="${inputs.magnitude !=  0}">
+				<div th:if="${inputs.magnitude !=  0.0d}">
 				Vektor Magnitude: [[${inputs.magnitude}]]
 				</div>
+				<div th:if="${inputs.seiteA !=  0.0d}">
+				Seite A: [[${inputs.seiteA}]]
+				</div>
+				<div th:if="${inputs.seiteB !=  0.0d}">
+				Seite B: [[${inputs.seiteB}]]
+				</div>
+				<div th:if="${inputs.seiteC !=  0.0d}">
+				Seite C: [[${inputs.seiteC}]]
+				</div>
+				<div th:if="${inputs.winkelA !=  0.0d}">
+				Winkel A: [[${inputs.winkelA}]]
+				</div>
+				<div th:if="${inputs.winkelB !=  0.0d}">
+				Winkel B: [[${inputs.winkelB}]]
+				</div>
+				<div th:if="${inputs.winkelC !=  0.0d}">
+				Winkel C: [[${inputs.winkelC}]]
+				</div>
+				<div th:if="${inputs.sinA!=  0.0d}">
+				Sin A: [[${inputs.sinA}]]
+				</div>
+				<div th:if="${inputs.sinB !=  0.0d}">
+				Sin B: [[${inputs.sinB}]]
+				</div>
+				<div th:if="${inputs.sinC !=  0.0d}">
+				Sin C: [[${inputs.sinC}]]
+				</div>
+				<div th:if="${inputs.cosA !=  0.0d}">
+				Cos A: [[${inputs.cosA}]]
+				</div>
+				<div th:if="${inputs.cosB !=  0.0d}">
+				Cos B: [[${inputs.cosB}]]
+				</div>
+				<div th:if="${inputs.cosC!=  0.0d}">
+				Cos C: [[${inputs.cosC}]]
+				</div>
+				<div th:if="${inputs.tanA !=  0.0d}">
+				Tan A: [[${inputs.tanA}]]
+				</div>
+				<div th:if="${inputs.tanB !=  0.0d}">
+				Tan B: [[${inputs.tanB}]]
+				</div>
+				<div th:if="${inputs.tanC !=  0.0d}">
+				Tan C: [[${inputs.tanC}]]
+				</div>
 				</p>
-				
 				<a th:href="@{calculations/calc}" class="btn btn-primary"><li>Restliche Werte Berechnen</li></a>
 			</div>
 		</div>

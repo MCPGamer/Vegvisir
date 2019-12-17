@@ -5,15 +5,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import ch.bbw.vegvisir.model.MathInputs;
 import ch.bbw.vegvisir.model.MathOperations;
 
 @Controller
 public class VegvisirController {
-	private MathOperations operations = new MathOperations();
 	private MathInputs inputs;
 	
 	@GetMapping("/")
@@ -44,8 +41,8 @@ public class VegvisirController {
 	
 	@GetMapping("calculations/calc")
 	public String doCalc(Model model) {
+		MathOperations.calcValues(inputs);
 		model.addAttribute("inputs", inputs);
-		//TODO: Calc other values
 		return "redirect:../calculations";
 	}
 }
